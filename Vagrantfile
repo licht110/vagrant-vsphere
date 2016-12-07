@@ -2,7 +2,7 @@ load "hosts"
 
 Vagrant.configure("2") do |config|
   config.vm.box = 'vsphere'
-  config.vm.box_url = './dummy.box'
+  config.vm.box_url = '/path/to/dummy.box'
   config.ssh.pty = true
 
   #config.vm.provision :shell, :path => "/path/to/provision/script"

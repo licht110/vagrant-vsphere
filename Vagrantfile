@@ -2,7 +2,7 @@ load "hosts"
 
 Vagrant.configure("2") do |config|
   config.vm.box = 'vsphere'
-  config.vm.box_url = '/path/to/dummy.box'
+  config.vm.box_url = './dummy.box'
   config.ssh.pty = true
 
   #config.vm.provision :shell, :path => "/path/to/provision/script"
@@ -15,11 +15,11 @@ Vagrant.configure("2") do |config|
   config.ssh.username = 'username'
   config.ssh.private_key_path = "/path/to/ssh/key"
 
-  # vsphere client setting 
+  # vsphere client setting
   config.vm.provider :vsphere do |vsphere|
     # vCenter
     vsphere.host = 'vcenter address'
-    # use cloning 
+    # use cloning
     vsphere.clone_from_vm = true
     # custamization spec
     vsphere.customization_spec_name = 'customization spec'
